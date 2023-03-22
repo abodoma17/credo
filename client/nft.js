@@ -24,7 +24,7 @@ async function createBat() {
      image: "ipfs://QmS9xEJN1MUbf8dLbYSz71BX3bzoJBLWUJd4ghgvL6QcC9", 
      name: batchNum}));
     console.log(json_file);
-    // await contract.methods._createBatch(batchNum).send({from:account});
+    await contract.methods.mintNFT("ipfs://QmRumYpVzK5bb8T2cuMzThB72ctVxHz2GynvYqUehqBzcU").send({from:account});
     console.log("done");
 }
 
