@@ -1,0 +1,11 @@
+# ignore all files in any directory named .parcel-cache
+<<<<<<< HEAD
+**/.parcel-cache
+
+#ignore
+data.mdb
+
+*.mdb
+=======
+.parcel-cache/
+>>>>>>> fa49cff (Added fully functioning dynamic NFT creation using Moralis API)

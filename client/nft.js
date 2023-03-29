@@ -1,6 +1,7 @@
 import Web3 from 'web3';
 import 'bootstrap/dist/css/bootstrap.css';
 import configuration from '../build/contracts/MyNFT.json';
+import { fileURLToPath } from 'url';
 
 const CONTRACT_ADDRESS = configuration.networks['5777'].address;
 const CONTRACT_ABI = configuration.abi;
@@ -11,23 +12,54 @@ const web3 = new Web3(
 
 const contract = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
 
+
+//Initializing Moralis
+const Moralis = require("moralis").default;
+const fs = require("fs");
+
 let account;
 
 const accountEl = document.getElementById('account');
 const batchesEl = document.getElementById('batches');
 document.getElementById("button1").onclick = createBat;
 
-async function createBat() {
+async function createBat(){
+
+    await Moralis.start({
+            apiKey: "TEJaUyO5l5d9hmTfZ29HWw8WtEEZZeJZ3OLPwOli57z6447CA0nv0GUrXdTiBaB5",
+        });
+    
     const batchNum = document.getElementById('inputBatch').value;
     console.log(batchNum);
-    json_file = console.log(JSON.stringify({ description: "test_desc",
+    json_file = JSON.stringify({ description: "test_desc",
      image: "ipfs://QmS9xEJN1MUbf8dLbYSz71BX3bzoJBLWUJd4ghgvL6QcC9", 
-     name: batchNum}));
-    console.log(json_file);
-    await contract.methods.mintNFT("ipfs://QmRumYpVzK5bb8T2cuMzThB72ctVxHz2GynvYqUehqBzcU").send({from:account});
-    console.log("done");
-}
+     name: batchNum});
 
+    // const jsonFile = new Moralis.File('file.json', {
+    //     base64: json_file});
+    
+    const abi = [
+        {
+            path: 'file.json',
+            content: {
+                name: batchNum,
+                description: "test",
+                image: "ipfs://QmS9xEJN1MUbf8dLbYSz71BX3bzoJBLWUJd4ghgvL6QcC9"
+            }
+        }
+    ];
+
+    console.log(abi);
+
+    const response = await Moralis.EvmApi.ipfs.uploadFolder({ abi });
+
+    responseJson = response.toJSON();
+    console.log(responseJson);
+    path = responseJson[0].path;
+    console.log(path);
+
+    await contract.methods.mintNFT(path).send({from:account});
+}
 
 const main = async () => {
     const accounts = await web3.eth.requestAccounts();
