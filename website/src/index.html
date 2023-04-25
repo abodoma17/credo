@@ -7,54 +7,151 @@
     <title>Home</title>
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.css" integrity="sha512-z04xx19bk6Q/FewwTQYDcyJsZKDglEvuszVGtMUOeaPwTl6p9oa914VzJRBDT/HLCYzG+GQ03xfOa9jCzcNLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./imgs/logo.png">
 </head>
 <body>
-    <!-- First Section -->
-    <div class="bg-[url('https://www.homeandsmart.de/var/site/storage/images/_aliases/fixed_col_12/4/0/7/0/510704-1-ger-DE/whatsin-suchmaschine-medikamente.jpg')] h-screen bg-cover bg-top flex flex-col"> 
 
-        <!-- Navigation Bar -->
-        <div class="flex justify-around items-center text-xl p-2 bg-white">
-            <div class="flex">
-                <img src="./imgs/logo.png" alt="" class="w-16">
-                <div class="flex justify-around items-center mx-5">
-                    <a class="mr-2 inline-block text-blue-900"  href="">Home</a>
-                    <a class="mx-2 inline-block hover:text-blue-900" href="">About</a>
-                </div>
-            </div>
+    <div id="fullpage">
 
-            
+        <!-- First Section -->
+        <div class="section bg-[url('https://www.homeandsmart.de/var/site/storage/images/_aliases/fixed_col_12/4/0/7/0/510704-1-ger-DE/whatsin-suchmaschine-medikamente.jpg')] h-screen bg-cover bg-top flex flex-col"> 
+            <div class="h-screen flex flex-col">
+                <!-- Navigation Bar -->
+                <div class="flex justify-around items-center text-xl p-2 bg-white">
+                    <div class="flex">
+                        <img src="./imgs/logo.png" alt="" class="w-16">
+                        <div class="justify-around items-center mx-5 lg:flex hidden">
+                            <a class="mr-2 inline-block text-blue-900"  href="">Home</a>
+                            <a class="mx-2 inline-block hover:text-blue-900" href="">About</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Anchors -->
+                    <div class="justify-around items-center mx-5 flex lg:hidden">
+                        <a class="mr-2 inline-block text-blue-900"  href="">Home</a>
+                        <a class="mx-2 inline-block hover:text-blue-900" href="">About</a>
+                    </div>
+                    
+                    <!-- Searchbar -->
+                    <div class="flex">
+                        <div class="lg:flex hidden text-base">
+                            <input type="text" placeholder="Search.." class="p-1 bg-slate-200 rounded-l-lg focus:outline-none">
+                            <div class="flex justify-center items-center bg-blue-900 p-1 rounded-r-lg">
+                                <i class="fa fa-search text-white" aria-hidden="true"></i>
+                            </div>
+                        </div>
 
-            <div class="flex">
-                <div class="flex text-base">
-                    <input type="text" placeholder="Search.." class="p-1 bg-slate-200 rounded-l-lg focus:outline-none">
-                    <div class="flex justify-center items-center bg-blue-900 p-1 rounded-r-lg">
-                        <i class="fa fa-search text-white" aria-hidden="true"></i>
+                        <div class="flex text-2xl justify-center items-center lg:ml-3">
+                            <div class="lg:hidden mx-1">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa-brands fa-twitter hover:cursor-pointer text-blue-500 mx-1"></i>
+                            <i class="fa-brands fa-facebook hover:cursor-pointer text-blue-800 mx-1"></i>
+                            <i class="fa-brands fa-instagram hover:cursor-pointer text-pink-600 mx-1"></i>
+                        </div>
                     </div>
                 </div>
 
-                <div class="flex text-2xl justify-center items-center ml-3 ">
-                    <i class="fa-brands fa-twitter hover:cursor-pointer text-blue-500 ml-2"></i>
-                    <i class="fa-brands fa-facebook hover:cursor-pointer text-blue-800 mx-1"></i>
-                    <i class="fa-brands fa-instagram hover:cursor-pointer text-pink-600 mx-1"></i>
+                <!-- Content -->
+                <div class="h-full flex justify-center items-center text-white bg-gray-900 bg-opacity-60">
+                    <div class="text-center lg:w-1/3 lg:px-0 px-5">
+                        <h1 class="text-6xl font-extrabold font-serif uppercase">Credo</h1>
+                        <p class="text-center text-3xl mt-4 mb-4 font-mono">Saving lives one prescription at a time.</p>
+                        <p class="font-extralight text-lg mt-0 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quibusdam debitis fugit alias pariatur nesciunt.</p>
+                        <a href="" class=" text-xl px-3 py-1 border-2 rounded-lg bg-none hover:bg-white hover:text-black">Scan QR Code</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Second Section -->
+        <div class="section h-screen">
+            <!-- Wrapper -->
+            <div class="h-screen w-screen md:px-[10%] py-[5%] px-7">
+                <img src="./imgs/bottle2.png" alt="" class="md:w-[30%] md:float-left lg:block hidden">
+                <div class="h-full flex justify-center items-center md:text-left text-center">
+                    <div class="md:pr-[20%]">
+                        <h1 class="lg:text-5xl mb-7 font-bold text-5xl">Lorem ipsum dolor sit amet consectetur adipisicing?</h1>
+                        <p class="font-light mb-2 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam soluta quaerat perferendis asperiores quia. Accusamus repellendus nobis consequuntur earum adipisci quod aspernatur explicabo non saepe quas.</p>
+                        <p class="font-light mb-2 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti quod a, laborum at harum accusamus. Commodi natus aliquid soluta impedit repellat necessitatibus aperiam magnam, nesciunt sint, libero recusandae quisquam!</p>
+                        <p class="font-light mb-5 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti quod a, laborum at harum accusamus. Commodi natus aliquid soluta impedit repellat necessitatibus aperiam magnam, nesciunt sint, libero recusandae quisquam!</p>
+                        <a href="" class="mt-5 text-lg px-3 py-1 border-2">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Content -->
-        <div class="h-full flex justify-center items-center text-white bg-gray-900 bg-opacity-60">
-            <div class="text-center w-1/3">
-                <h1 class="text-6xl font-extrabold font-serif uppercase">Credo</h1>
-                <p class="text-center text-3xl mt-4 mb-0 font-light">Saving lives one prescription at a time.</p>
-                <p class="font-extralight text-lg mt-0 mb-5">TEST</p>
-                <a href="" class=" text-xl px-3 py-1 border-2 rounded-lg bg-none hover:bg-white hover:text-black">Scan QR Code</a>
+        <!-- Third Section -->
+        <div class="section h-screen bg-[url('https://images.moneycontrol.com/static-mcnews/2022/05/logistic.jpg?impolicy=website&width=1600&height=900')] bg-cover bg-top">
+            <div class="h-screen w-screen flex justify-center items-center bg-gray-900 bg-opacity-70 lg:px-0 p-5">
+                <div class="text-white lg:w-1/3">
+                    <h1 class="lg:text-5xl mb-7 font-bold text-5xl">Credo Mission</h1>
+                    <p class="font-light mb-2 text-xl">Credo has a proven track record of delivering exceptional service to our customers. We prioritize timely and reliable delivery of your goods, ensuring they arrive at their destination safely and in the condition they were sent. </p>
+                    <p class="font-light mb-2 text-xl">Our team of experienced professionals is dedicated to providing personalized and efficient logistics solutions tailored to meet your specific needs. You can trust us to handle your shipments with the utmost care and attention to detail, every time.</p>
+                    <p class="font-light mb-5 text-xl">Whether you need transportation, warehousing, or distribution, we have the expertise and resources to meet your needs. We work closely with our clients to develop customized logistics solutions that are tailored to their specific requirements.</p>
+                    <a href="" class="mt-5 text-lg px-3 py-1 border-2">Learn More</a>
+                </div>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="section h-screen bg-gray-900 text-white">
+            <div class="lg:flex lg:w-full px-[10%] py-[4%]">
+                <div class="lg:w-1/4 flex justify-center">
+                    <div class="flex flex-col">
+                        <h1 class="font-bold text-xl mb-2">Get to Know Us</h1>
+                        <a href="" class="text-lg font-light hover:underline">Careers</a>
+                        <a href="" class="text-lg font-light hover:underline">Blogs</a>
+                        <a href="" class="text-lg font-light hover:underline">About Credo</a>
+                        <a href="" class="text-lg font-light hover:underline">Investor Relations</a>
+                    </div>   
+                </div>
+
+                <div class="lg:w-1/4 flex justify-center">
+                    <div class="flex flex-col">
+                        <h1 class="font-bold text-xl mb-2">Get to Know Us</h1>
+                        <a href="" class="text-lg font-light hover:underline">Careers</a>
+                        <a href="" class="text-lg font-light hover:underline">Blogs</a>
+                        <a href="" class="text-lg font-light hover:underline">About Credo</a>
+                        <a href="" class="text-lg font-light hover:underline">Investor Relations</a>
+                    </div>   
+                </div>
+
+                <div class="lg:w-1/4 flex justify-center">
+                    <div class="flex flex-col">
+                        <h1 class="font-bold text-xl mb-2">Get to Know Us</h1>
+                        <a href="" class="text-lg font-light hover:underline">Careers</a>
+                        <a href="" class="text-lg font-light hover:underline">Blogs</a>
+                        <a href="" class="text-lg font-light hover:underline">About Credo</a>
+                        <a href="" class="text-lg font-light hover:underline">Investor Relations</a>
+                    </div>   
+                </div>
+
+                <div class="lg:w-1/4 flex justify-center">
+                    <div class="flex flex-col">
+                        <h1 class="font-bold text-xl mb-2">Get to Know Us</h1>
+                        <a href="" class="text-lg font-light hover:underline">Careers</a>
+                        <a href="" class="text-lg font-light hover:underline">Blogs</a>
+                        <a href="" class="text-lg font-light hover:underline">About Credo</a>
+                        <a href="" class="text-lg font-light hover:underline">Investor Relations</a>
+                    </div>   
+                </div>
+
+            </div>
+        </footer>
     </div>
 
-    <!-- Section 2 -->
-    <div class="h-screen flex">
 
-    </div>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js" integrity="sha512-GS3CSFQ4aj+0fL2a0wV1ouvpdbTZ3eEUriXTpXt50dc0CkO1fgyWuLoPA5NWy1PAWmcaZNneM+OAThgCqPnX+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new fullpage('#fullpage', {
+            //options here
+            autoScrolling:true,
+            scrollHorizontally: true,
+            verticalCentered: false
+        });
+    </script>
 </body>
 </html>
