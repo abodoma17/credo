@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./imgs/logo.png">
+        <title>NFT Minting</title>
+        <link rel="stylesheet" href="../dist/output.css">
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <div class="flex justify-around items-center p-2 bg-white">
+            <div class="flex">
+                <img src="./imgs/logo.png" alt="" class="w-16">
+                <div class="flex justify-around items-center mx-5">
+                    <a class="mr-2 inline-block text-blue-900 text-3xl"  href="">Credo</a>
+                </div>
+            </div>
+            <div class="flex text-xs justify-center items-center">
+                <a class="mr-4 inline-block text-blue-900 hover:text-emerald-500"  href="">Previous Batches</a>
+                <a class="mr-4  inline-block text-blue-900 hover:text-emerald-500"  href="">Signout</a>
+            </div>
+        </div>
+        <!-- Content -->
+        <div class=" text-center p-40 text-blue-950">
+            <h1 class="text-6xl p-8 ">Batch Registration </h1>
+            <div class="p-2">
+            <label class="block mb-2 text-sm font-medium text-gray-900">Batch Number: </label>
+            <input type="text" placeholder=" Insert The Batch Number " class="p-2 w-96 border"> 
+            </div>
+            <div class="p-2">
+            <label class="block mb-2 text-sm font-medium text-gray-900">Owner Address: </label>
+            <input type="text" placeholder=" Insert Your Address " class="p-2 w-96 border ">
+            </div>
+            <button id="registrationBtn" class="border-2 border-blue-950 rounded-lg px-8 py-4 text-blue-950 font-bold  mt-5  hover:bg-blue-950 hover:text-white">Register</button>
+        </div>
+        <!-- Footer -->
+        <footer class=" p-13 bg-white ">
+            <div></div>
+        </footer>
+    </body>
+</html>
