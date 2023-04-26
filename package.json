@@ -1,10 +1,13 @@
 {
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
     "parcel": "^2.8.3",
+    "postcss": "^8.4.23",
     "tailwindcss": "^3.3.1"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.2",
+    "flowbite": "^1.6.5",
     "fullpage.js": "^4.0.19"
   }
 }

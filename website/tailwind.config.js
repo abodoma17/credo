@@ -10,6 +10,13 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},   
+  },
+  darkMode: 'class',
+  plugins:[
+    require('flowbite/plugin')
+  ]
 }
 
