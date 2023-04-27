@@ -22,6 +22,13 @@ let account;
 const accountEl = document.getElementById('account');
 const batchesEl = document.getElementById('batches');
 document.getElementById("button1").onclick = createBat;
+document.getElementById("button2").onclick = retrieveMetadata;
+
+async function retrieveMetadata()
+{
+    metadataURI = await contract.methods.getMetadata(2).call();
+    console.log(metadataURI);
+}
 
 async function createBat(){
 
@@ -58,7 +65,8 @@ async function createBat(){
     path = responseJson[0].path;
     console.log(path);
 
-    await contract.methods.mintNFT(path).send({from:account});
+    new_id = await contract.methods.mintNFT(path).send({from:account});
+    console.log(new_id);
 }
 
 const main = async () => {

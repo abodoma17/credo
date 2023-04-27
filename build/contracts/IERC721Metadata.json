@@ -646,7 +646,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-03-22T16:20:44.307Z",
+  "updatedAt": "2023-04-27T01:18:00.460Z",
   "devdoc": {
     "details": "See https://eips.ethereum.org/EIPS/eip-721",
     "events": {
