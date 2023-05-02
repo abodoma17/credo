@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking vitals</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="flex justify-around items-center text-xl p-2 bg-white">
+        <div class="flex">
+            <img src="./imgs/logo.png" alt="" class="w-16">
+            <div class="justify-around items-center mx-5 lg:flex hidden">
+                <a class="mr-2 inline-block text-blue-900"  href="">Home</a>
+                <a class="mx-2 inline-block hover:text-blue-900" href="">About</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Anchors -->
+        <div class="justify-around items-center mx-5 flex lg:hidden">
+            <a class="mr-2 inline-block text-blue-900"  href="">Home</a>
+            <a class="mx-2 inline-block hover:text-blue-900" href="">About</a>
+        </div>
+        
+        <!-- Searchbar -->
+        <div class="flex">
+            <div class="lg:flex hidden text-base">
+                <input type="text" placeholder="Search.." class="p-1 bg-slate-200 rounded-l-lg focus:outline-none">
+                <div class="flex justify-center items-center bg-blue-900 p-1 rounded-r-lg">
+                    <i class="fa fa-search text-white" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="flex text-2xl justify-center items-center lg:ml-3">
+                <div class="lg:hidden mx-1">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <i class="fa-brands fa-twitter hover:cursor-pointer text-blue-500 mx-1"></i>
+                <i class="fa-brands fa-facebook hover:cursor-pointer text-blue-800 mx-1"></i>
+                <i class="fa-brands fa-instagram hover:cursor-pointer text-pink-600 mx-1"></i>
+            </div>
+        </div>
+    </div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Content -->
+    <div class="grid grid-rows-1 grid-flow-col content-center gap-4 mt-8 mr-20 ml-20">
+        <div class="bg-white col-span-2  h-36 w-2/3 ml-56 mr-24 content-center " > 
+            <p class="text-center text-2xl mt-4 mb-0 font-bold text-blue-950">Owner Name :</p>
+            <p class="text-center text-2xl mt-2 mb-0 font-bold text-blue-950">Cargo Number :</p>
+            <p class="text-center text-2xl mt-2 mb-0 font-bold text-blue-950">Batch Number :</p>
+        </div> 
+    </div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="grid grid-rows-1 grid-flow-col gap-4 px-32 mt-12 mr-20 ml-20">
+        <div class="bg-white col-span-2  h-auto w-5/6 ml-32 mr-24 " >
+            <div class="shadow-lg rounded-lg overflow-hidden">
+                <div class="py-3 px-5 bg-gray-50 text-blue-950 font-bold text-2xl">
+                    Temprature
+                </div>
+                <canvas class="p-10" id="chartLine"></canvas>
+              </div>       
+              <!-- Required chart.js -->
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              <!-- Chart line -->
+              <script>
+                  const labels = [
+                      '5h ago',
+                      '4h ago',
+                      '3h ago',
+                      '2h ago',
+                      '1h ago',
+                      'Now',
+                  ];
+                  const data = {
+                      labels: labels,
+                      datasets: [{
+                          label: 'Tempreture during last five hours',
+                          backgroundColor: 'hsl(143, 58%, 42%)',
+                          borderColor: 'hsl(143, 58%, 42%)',
+                          data: [-20, -10, 0, 10, 20, 30],
+                      }]
+                  };
+                  var configLineChart = {
+                      type: 'line',
+                      data,
+                      options: {}
+                  };
+                  var chartLine = new Chart(
+                      document.getElementById('chartLine'),
+                      configLineChart
+                  );
+              </script>
+              </div>
+        </div> 
+    </div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="grid grid-rows-1 grid-flow-col gap-4 mt-12 mr-20 ml-20">
+        <div class="bg-white col-span-2  h-auto w-5/6 ml-32 mr-24 " >
+            <div class="shadow-lg rounded-lg overflow-hidden">
+                <div class="py-3 px-5 bg-gray-50 text-blue-950 font-bold text-2xl">
+                    Humidity
+                </div>
+                <canvas class="p-15 " id="chartLine2"></canvas>
+                 
+              <!-- Required chart.js -->
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              <!-- Chart line -->
+              <script>
+                  const labels2 = [
+                      '5h ago',
+                      '4h ago',
+                      '3h ago',
+                      '2h ago',
+                      '1h ago',
+                      'Now',
+                  ];
+                  const data2 = {
+                      labels: labels2,
+                      datasets: [{
+                          label: 'Humidty during last five hours',
+                          backgroundColor: 'hsl(143, 58%, 42%)',
+                          borderColor: 'hsl(143, 58%, 42%)',
+                          data: [5, 15, 25, 40, 55, 70],
+                      }]
+                  };
+                  console.log(data2)
+                  var configLineChart = {
+                      type: 'line',
+                      data2,
+                      options: {}
+                  };
+                  console.log(configLineChart)
+                  var chartLine = new Chart(
+                      document.getElementById('chartLine2'),
+                      configLineChart
+                  );
+              </script>
+              </div>
+        </div> 
+    </div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+
+<div class="grid grid-rows-1 grid-flow-col gap-4 mt-5 mr-20 ml-20 mb-20">
+    <div class="bg-white col-span-2  h-auto w-5/6 ml-32 mr-24 " >
+        <div class="shadow-lg rounded-lg overflow-hidden">
+            <div class="py-3 px-5 bg-gray-50 text-blue-950 font-bold text-2xl">
+                Pressure
+            </div>
+            <canvas class="p-10 " id="chartLine3"></canvas>
+          </div>       
+          <!-- Required chart.js -->
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <!-- Chart line -->
+          <script>
+              const labels3 = [
+                  '5h ago',
+                  '4h ago',
+                  '3h ago',
+                  '2h ago',
+                  '1h ago',
+                  'Now',
+              ];
+              const data3 = {
+                  labels: labels3,
+                  datasets: [{
+                      label: 'Pressure during last five hours',
+                      backgroundColor: 'hsl(143, 58%, 42%)',
+                      borderColor: 'hsl(143, 58%, 42%)',
+                      data: [5, 15, 25, 40, 55, 70],
+                  }]
+              };
+              const configLineChart3 = {
+                  type: 'line',
+                  data,
+                  options: {}
+              };
+              var chartLine = new Chart(
+                  document.getElementById('chartLine3'),
+                  configLineChart3
+              );
+          </script>
+          </div>
+    </div> 
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------   
+    <div class="grid grid-rows-1 grid-flow-col gap-4 mt-12 mr-20 ml-20 mb-20">
+        <div class="bg-white col-span-2  h-80 w-5/6 ml-32 mr-24 " >
+            <div id="map"></div>
+            <script>
+              function initMap() {
+                const map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 12,
+                  center: { lat: 37.7749, lng: -122.4194 },
+                });
+          
+                // Replace the coordinates below with the live location
+                const marker = new google.maps.Marker({
+                  position: { lat: 37.7749, lng: -122.4194 },
+                  map: map,
+                });
+              }
+            </script>
+          
+            <script async defer src="https://maps.googleapis.com/maps/api/js"></script>
+            <script>
+              function getLocation() {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                  alert("Geolocation is not supported by this browser.");
+                }
+              }
+          
+              function showPosition(position) {
+                const map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 12,
+                  center: { lat: position.coords.latitude, lng: position.coords.longitude },
+                });
+          
+                const marker = new google.maps.Marker({
+                  position: { lat: position.coords.latitude, lng: position.coords.longitude },
+                  map: map,
+                });
+              }
+          
+              getLocation();
+          </script>
+
+        </div> 
+    </div>
+
+
+--------------------------------------------------------------------------------------------------------------------------------------->   
+
+</body>
+</html>
