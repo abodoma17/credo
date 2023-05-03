@@ -1,7 +1,7 @@
 <!--
   #f4f3ee
   #023941
-  #2da95c
+  #bd4500
   #bd4500
   #090b0e
 -->
@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/output.css">
-    <title>Log in Page</title>
+    <title>Register Page</title>
 </head>
 
 <body>
@@ -26,22 +26,58 @@
                     <div>
                         <!--form-->
                         <div class="px-16">
-                            <h2 class="font-bold text-3xl text-[#023941]">Login</h2>
-                            <p class="text-sm mt-4 text-[#023941]">If you already a member, easily log in</p>
+                            <h2 class="font-bold text-3xl text-[#023941]">Register</h2>
+                            <p class="text-sm mt-4 text-[#023941]">Fill the form below, and verification link will be
+                                sent to the provided e-mail.</p>
                             <form action="" class="flex flex-col gap-4 mt-4">
-                                <label for="UserEmail" class="relative block overflow-hidden rounded-md border border-gray-400 px-3 pt-3 shadow-sm focus-within:border-[#023941] focus-within:ring-1 focus-within:ring-[#023941]">
-                                    <input type="email" id="UserEmail" placeholder="Email" class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" />
-                                    <span class="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs">
-                                        Email
+                                <label for="CompanyName"
+                                    class="relative block overflow-hidden rounded-md border border-gray-400 px-3 pt-3 shadow-sm focus-within:border-[#023941] focus-within:ring-1 focus-within:ring-[#023941]">
+                                    <input type="text" id="CompanyName" placeholder="Company Name"
+                                        class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" />
+                                    <span
+                                        class="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs">
+                                        Company Name
                                     </span>
                                 </label>
-                                <label for="UserPassword" class="relative block overflow-hidden rounded-md border border-gray-400 px-3 pt-3 shadow-sm focus-within:border-[#023941] focus-within:ring-1 focus-within:ring-[#023941]">
-                                    <input type="password" id="UserPassword" placeholder="Password" class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" />
-                                    <span class="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs">
+                                <label for="RepName"
+                                    class="relative block overflow-hidden rounded-md border border-gray-400 px-3 pt-3 shadow-sm focus-within:border-[#023941] focus-within:ring-1 focus-within:ring-[#023941]">
+                                    <input type="text" id="RepresentativeName" placeholder="Representative Name"
+                                        class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" />
+                                    <span
+                                        class="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs">
+                                        Representative Name
+                                    </span>
+                                </label>
+                                <label for="UserEmail"
+                                    class="relative block overflow-hidden rounded-md border border-gray-400 px-3 pt-3 shadow-sm focus-within:border-[#023941] focus-within:ring-1 focus-within:ring-[#023941]">
+                                    <input type="email" id="UserEmail" placeholder="Email"
+                                        class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" />
+                                    <span
+                                        class="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs">
+                                        E-mail
+                                    </span>
+                                </label>
+                                <label for="UserPassword"
+                                    class="relative block overflow-hidden rounded-md border border-gray-400 px-3 pt-3 shadow-sm focus-within:border-[#023941] focus-within:ring-1 focus-within:ring-[#023941]">
+                                    <input type="password" id="UserPassword" placeholder="Password"
+                                        class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" />
+                                    <span
+                                        class="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs">
                                         Password
                                     </span>
                                 </label>
-                                <button type="button" class="w-full text-[#023941] hover:text-white border border-[#023941] hover:bg-[#023941]  font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-[#023941] dark:text-[#023941] dark:hover:text-white dark:hover:bg-[#023941] dark:focus:ring-[#023941]">LOG IN</button>
+                                <label for="UserPassword"
+                                    class="relative block overflow-hidden rounded-md border border-gray-400 px-3 pt-3 shadow-sm focus-within:border-[#023941] focus-within:ring-1 focus-within:ring-[#023941]">
+                                    <input type="password" id="UserPassword" placeholder="Password"
+                                        class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" />
+                                    <span
+                                        class="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs">
+                                        Confirm Password
+                                    </span>
+                                </label>
+                                <button type="button"
+                                    class="w-full text-[#023941] hover:text-white border border-[#023941] hover:bg-[#023941] focus:ring-4 focus:outline-none focus:ring-[#023941] font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-[#023941] dark:text-[#023941] dark:hover:text-white dark:hover:bg-[#023941] dark:focus:ring-[#023941]">REGISTER</button>
+
                             </form>
                         </div>
                         <!--OR-->
@@ -52,21 +88,13 @@
                         </div>
                         <!--Register now-->
                         <div class="flex flex-col justify-center items-center gap-4 mt-10">
-                            <a href="../src/signup.html"
-                                class="cursor-pointer text-white bg-[#2da95c] hover:bg-[#2D965C]  font-medium rounded-xl text-sm px-20 py-4 text-center inline-flex items-center">
-                                REGISTER NOW
-                                <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
+                            <a href="../src/ALT-login-signup.html" class="text-opacity-70 text-[#bd4500] cursor-pointer hover:text-[#bd4500] hover:text-opacity-100">Have an Account?</a>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <!--Image-->
-                <div class="bg-[#2da95c] hidden md:block w-1/2 items-center py-10 px-10">
+                <div class="bg-[#bd4500] hidden md:block w-1/2 items-center py-10 px-10">
                     <svg id="a87032b8-5b37-4b7e-a4d9-4dbfbe394641" data-name="Layer 1"
                         xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 744.84799 747.07702">
                         <path id="b3ac2088-de9b-4f7f-bc99-0ed9705c1a9d" data-name="Path 22"
@@ -82,29 +110,29 @@
                             d="M561.971,337.96451a24.43594,24.43594,0,0,1,12.23-21.174,24.45,24.45,0,1,0,0,42.345A24.43391,24.43391,0,0,1,561.971,337.96451Z"
                             transform="translate(-227.576 -76.46149)" fill="#ccc" />
                         <circle id="a4813fcf-056e-4514-bb8b-e6506f49341f" data-name="Ellipse 1" cx="364.43401"
-                            cy="261.50202" r="24.45" fill="#2da95c" />
+                            cy="261.50202" r="24.45" fill="#bd4500" />
                         <path id="bbe451c3-febc-41ba-8083-4c8307a2e73e" data-name="Path 8"
                             d="M632.872,414.3305h-142.5a5.123,5.123,0,0,1-5.117-5.117v-142.5a5.123,5.123,0,0,1,5.117-5.117h142.5a5.123,5.123,0,0,1,5.117,5.117v142.5A5.123,5.123,0,0,1,632.872,414.3305Zm-142.5-150.686a3.073,3.073,0,0,0-3.07,3.07v142.5a3.073,3.073,0,0,0,3.07,3.07h142.5a3.073,3.073,0,0,0,3.07-3.07v-142.5a3.073,3.073,0,0,0-3.07-3.07Z"
                             transform="translate(-227.576 -76.46149)" fill="#ccc" />
                         <rect id="bb28937d-932f-4fdf-befe-f406e51091fe" data-name="Rectangle 1" x="218.56201"
                             y="447.10197" width="218.552" height="2.047" fill="#ccc" />
                         <circle id="fcef55fc-4968-45b2-93bb-1a1080c85fc7" data-name="Ellipse 2" cx="225.46401"
-                            cy="427.41999" r="6.902" fill="#2da95c" />
+                            cy="427.41999" r="6.902" fill="#bd4500" />
                         <rect id="ff33d889-4c74-4b91-85ef-b4882cc8fe76" data-name="Rectangle 2" x="218.56201"
                             y="516.11803" width="218.552" height="2.047" fill="#ccc" />
                         <circle id="e8fa0310-b872-4adf-aedd-0c6eda09f3b8" data-name="Ellipse 3" cx="225.46401"
-                            cy="496.43702" r="6.902" fill="#2da95c" />
+                            cy="496.43702" r="6.902" fill="#bd4500" />
                         <path
                             d="M660.69043,671.17188H591.62207a4.50493,4.50493,0,0,1-4.5-4.5v-24.208a4.50492,4.50492,0,0,1,4.5-4.5h69.06836a4.50491,4.50491,0,0,1,4.5,4.5v24.208A4.50492,4.50492,0,0,1,660.69043,671.17188Z"
-                            transform="translate(-227.576 -76.46149)" fill="#2da95c" />
+                            transform="translate(-227.576 -76.46149)" fill="#bd4500" />
                         <circle id="e12ee00d-aa4a-4413-a013-11d20b7f97f7" data-name="Ellipse 7" cx="247.97799"
-                            cy="427.41999" r="6.902" fill="#2da95c" />
+                            cy="427.41999" r="6.902" fill="#bd4500" />
                         <circle id="f58f497e-6949-45c8-be5f-eee2aa0f6586" data-name="Ellipse 8" cx="270.492"
-                            cy="427.41999" r="6.902" fill="#2da95c" />
+                            cy="427.41999" r="6.902" fill="#bd4500" />
                         <circle id="b4d4939a-c6e6-4f4d-ba6c-e8b05485017d" data-name="Ellipse 9" cx="247.97799"
-                            cy="496.43702" r="6.902" fill="#2da95c" />
+                            cy="496.43702" r="6.902" fill="#bd4500" />
                         <circle id="aff120b1-519b-4e96-ac87-836aa55663de" data-name="Ellipse 10" cx="270.492"
-                            cy="496.43702" r="6.902" fill="#2da95c" />
+                            cy="496.43702" r="6.902" fill="#bd4500" />
                         <path
                             d="M792.25256,565.92292a10.09371,10.09371,0,0,1,1.41075.78731l44.8523-19.14319,1.60093-11.81526,17.92157-.10956-1.05873,27.0982-59.19987,15.65584a10.60791,10.60791,0,0,1-.44749,1.20835,10.2346,10.2346,0,1,1-5.07946-13.68169Z"
                             transform="translate(-227.576 -76.46149)" fill="#ffb8b8" />
