@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.2",
+    "flowbite": "^1.6.5",
     "fullpage.js": "^4.0.19"
   }
 }
