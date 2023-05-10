@@ -55109,8 +55109,8 @@ exports.pipeline = require("36edddf31f33e22d");
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
-var global = arguments[3];
 var process = require("cd889477d2520056");
+var global = arguments[3];
 "use strict";
 module.exports = Readable;
 /*<replacement>*/ var Duplex;
@@ -56890,8 +56890,8 @@ Object.defineProperty(Duplex.prototype, "destroyed", {
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
 // the drain event emission and buffering.
-var global = arguments[3];
 var process = require("6cb0a07e32190a0");
+var global = arguments[3];
 "use strict";
 module.exports = Writable;
 /* <replacement> */ function WriteReq(chunk, encoding, cb) {
