@@ -28,6 +28,8 @@ async function retrieveMetadata()
 {
     metadataURI = await contract.methods.getMetadata(2).call();
     console.log(metadataURI);
+    newLink = reformatLink(metadataURI);
+    logJSON(newLink);
 }
 
 async function createBat(){
@@ -67,6 +69,21 @@ async function createBat(){
 
     new_id = await contract.methods.mintNFT(path).send({from:account});
     console.log(new_id);
+}
+
+function reformatLink(link)
+{
+    link_tokens = link.split('/');
+    link_tokens = link_tokens.slice(-3);
+    new_link = 'https://ipfs.io/' + link_tokens[0] + '/' + link_tokens[1] + '/' + link_tokens[2];
+    return new_link;
+}
+
+async function logJSON(link){
+    new_link = reformatLink(link);
+    const response = await fetch(new_link);
+    const jsonData = await response.json();
+    console.log(jsonData);
 }
 
 const main = async () => {
