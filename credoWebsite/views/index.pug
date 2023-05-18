@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/logo.png">
+        <title>NFT Minting</title>
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+    <body class="flex flex-col min-h-screen">
+        <!-- Navigation Bar -->
+        <div class="flex justify-around items-center p-2 bg-white">
+            <div class="flex">
+                <img src="images/logo.png" alt="" class="w-16">
+                <div class="flex justify-around items-center mx-5">
+                    <a class="mr-2 inline-block text-blue-900 text-3xl"  href="">Credo</a>
+                </div>
+            </div>
+            
+            <div class="flex text-xs justify-center items-center">
+                <a class="mr-4 text-xl inline-block text-blue-900 hover:text-emerald-500"  href="">Previous Batches</a>
+                <a class="mr-4 text-xl  inline-block text-blue-900 hover:text-emerald-500"  href="">Signout</a>
+            </div>
+
+            <p class="mr-4 text-xl inline-block" id="account">No wallet linked</p>
+        </div>
+        <!-- Content -->
+        <div class=" text-center py-40 text-blue-950 ">
+            <h1 class="text-5xl p-8 ">Batch Management</h1>
+            <div class="p-2">
+            <label class=" mb-2 text-2xl text-black  p-2">Batch Number: </label>
+            <input type="text" id="inputBatch" placeholder=" Insert The Batch Number " class="p-2 w-96 border rounded-lg "> 
+            </div>
+            <button id="button2" class="text-2xl border-2 border-blue-950 rounded-lg px-4 py-2 text-blue-950  font-bold  mt-5  hover:bg-blue-950  hover:text-white">Retrieve NFT</button>
+            <button id="button1" class="text-2xl border-2 border-blue-950  rounded-lg px-4 py-2 text-blue-950  font-bold  mt-5  hover:bg-blue-950  hover:text-white">Mint NFT</button>
+        </div>
+        <!-- Footer -->
+        <footer class=" p-8 bg-white mt-auto">
+            <div></div>
+        </footer>
+        <script type="module" src="javascripts/nft.js"></script>
+    </body>
+</html>
