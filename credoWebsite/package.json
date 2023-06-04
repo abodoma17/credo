@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
     "tailbuild": "tailwindcss build -i public/stylesheets/tailwind.css -o public/stylesheets/style.css",
-    "parcbuild": "parcel build public/javascripts/nftOriginal.js"
+    "parcbuild": "parcel build public/javascripts/nftOriginal.js",
+    "nftRetrBuild": "parcel build public/javascripts/nftTokenRetrieval.js"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",

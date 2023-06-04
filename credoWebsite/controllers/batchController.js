@@ -21,8 +21,6 @@ exports.token_create = [
             token_id : req.body.token_id
         });
 
-        console.log(token);
-
         if(!errors.isEmpty()) {
             console.log("ERROR");
             res.send(errors.array());
@@ -38,9 +36,41 @@ exports.token_create = [
                 await token.save();
 
                 console.log("TOKEN SAVED");
-                res.send(token);
+                console.log(token);
+
+                res.redirect("index");
             }
         }
     }),
+];
 
+
+exports.token_getID = [
+
+    //validate
+    body("batch_num")
+    .trim()
+    .escape(),
+
+    asyncHandler( async (req, res, next) => {
+        console.log(req.body.batch_num);
+
+        const errors = validationResult(req);
+
+        if(!errors.isEmpty()) {
+            console.log("ERROR");
+            res.send(errors.array());
+        }
+        else{
+            const tokenExists = await Token.findOne({ batch_num: req.body.batch_num }).exec();
+            const newTokenID = tokenExists.token_id;
+
+            if(tokenExists){
+                res.redirect(`/batch/${newTokenID}`);
+            }
+            else{
+                res.send("NO BATCH WITH THIS ID");
+            }
+        }
+    }),
 ];

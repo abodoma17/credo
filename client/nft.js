@@ -24,9 +24,9 @@ const batchesEl = document.getElementById('batches');
 document.getElementById("button1").onclick = createBat;
 document.getElementById("button2").onclick = retrieveMetadata;
 
-async function retrieveMetadata()
+async function retrieveMetadata(id)
 {
-    metadataURI = await contract.methods.getMetadata(2).call();
+    metadataURI = await contract.methods.getMetadata(id).call();
     console.log(metadataURI);
     newLink = reformatLink(metadataURI);
     logJSON(newLink);
@@ -69,6 +69,9 @@ async function createBat(){
 
     new_id = await contract.methods.mintNFT(path).send({from:account});
     console.log(new_id);
+
+    currentTokenCounter = await contract.methods.getLatestID().call();
+    console.log(currentTokenCounter);
 }
 
 function reformatLink(link)

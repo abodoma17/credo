@@ -11,10 +11,12 @@ router.get('/', function(req, res) {
 // Create new NFT entry in db (POST)
 router.post('/create', batchController.token_create);
 
+router.post('/tokenData', batchController.token_getID);
 
-router.get('/:batchNumber', function(req, res) {
-    console.log(req.params.batchNumber);
-    res.render('index');
+router.get('/:tokenID', function(req, res) {
+    console.log(req.params.tokenID);
+    tokenID = req.params.tokenID;
+    res.render('nft', { tokenID });
 });
 
 module.exports = router;

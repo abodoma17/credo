@@ -20,14 +20,45 @@ let account;
 const accountEl = document.getElementById('account');
 const batchesEl = document.getElementById('batches');
 document.getElementById("button1").onclick = createBat;
-document.getElementById("button2").onclick = retrieveMetadata;
+document.getElementById("button2").onclick = getTokenID;
 
 async function retrieveMetadata()
 {
-    let metadataURI = await contract.methods.getMetadata(2).call();
+    let metadataURI = await contract.methods.getMetadata(1).call();
     console.log(metadataURI);
     let newLink = reformatLink(metadataURI);
     logJSON(newLink);
+}
+
+async function addTokenToDB(batch_num, token_ID){
+    fetch("/batch/create", {
+        method: "POST",
+        body: JSON.stringify({
+            "batch_num": batch_num,
+            "token_id": token_ID
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+        })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+}
+
+async function getTokenID(){
+    const batch_num = document.getElementById('inputBatch').value;
+
+    fetch("/batch/tokenData", {
+        method: "POST",
+        body: JSON.stringify({
+            batch_num
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+        })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
 }
 
 async function createBat(){
@@ -67,6 +98,11 @@ async function createBat(){
 
     let new_id = await contract.methods.mintNFT(path).send({from:account});
     console.log(new_id);
+
+    let currentTokenCounter = await contract.methods.getLatestID().call();
+    console.log(currentTokenCounter);
+
+    addTokenToDB(batchNum, currentTokenCounter);
 }
 
 function reformatLink(link)

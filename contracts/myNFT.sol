@@ -13,6 +13,11 @@ contract MyNFT is ERC721URIStorage, Ownable {
 
     constructor() ERC721("Batch NFT", "CRE") {}
 
+    function getLatestID() public view returns (uint256){
+        uint256 newItemId = _tokenIds.current();
+        return newItemId;
+    }
+
     function getMetadata(uint256 id) public view returns (string memory)
     {
         return tokenURI(id);
