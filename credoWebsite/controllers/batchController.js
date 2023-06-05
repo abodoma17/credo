@@ -53,7 +53,7 @@ exports.token_getID = [
     .escape(),
 
     asyncHandler( async (req, res, next) => {
-        console.log(req.body.batch_num);
+        console.log(`BATCH NUMBER RECEIVED: ${req.body.batch_num}`);
 
         const errors = validationResult(req);
 
@@ -66,6 +66,7 @@ exports.token_getID = [
             const newTokenID = tokenExists.token_id;
 
             if(tokenExists){
+                console.log(`Token with id ${newTokenID} exits, redirecting.`)
                 res.redirect(`/batch/${newTokenID}`);
             }
             else{
