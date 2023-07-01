@@ -33,6 +33,7 @@
   "devDependencies": {
     "assert": "^2.0.0",
     "events": "^3.3.0",
+    "html5-qrcode": "^2.3.8",
     "nodemon": "^2.0.22",
     "stream-browserify": "^3.0.0"
   }
