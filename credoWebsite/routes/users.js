@@ -15,4 +15,6 @@ router.get('/login', function(req, res, next) {
   res.render('login.pug')
 });
 router.post('/login', userController.user_login);
+
+router.get('/logout', userController.logout)
 module.exports = router;

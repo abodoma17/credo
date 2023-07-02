@@ -1,17 +1,17 @@
 var express = require('express');
 var router = express.Router();
-
+const auth = require("../middleware/auth");
 const batchController = require("../controllers/batchController");
 
 /* GET NFT Page */
-router.get('/', function(req, res) {
+router.get('/', auth.isAuthenticated, auth.isManufacturer, function(req, res) {
   res.render('batch');
 });
 
 // Create new NFT entry in db (POST)
-router.post('/create', batchController.token_create);
+router.post('/create', auth.isAuthenticated, auth.isManufacturer, batchController.token_create);
 
-router.post('/tokenData', batchController.token_getID);
+router.post('/tokenData', auth.isAuthenticated, auth.isManufacturerORDistributer, batchController.token_getID);
 
 router.get("/form", (req, res) => {
   res.render("form");

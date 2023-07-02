@@ -38,15 +38,15 @@ html(lang='en')
                     span.absolute.start-3.top-3.text-xs.text-gray-700.transition-all(class='-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs')
                       | Confirm Password
                   select#role.h-8.w-full.bg-transparent.border.border-gray-400.rounded-md.p-3.placeholder-transparent(name='role', class='focus:outline-none focus:ring-0 sm:text-sm')
-                    option(value='Supplier') Manufacturer
+                    option(value='Manufacturer') Manufacturer
                     option(value='Distributor') Distributor
-                    option(value='Manufacturer') Pharmacy
+                    option(value='Pharmacy') Pharmacy
                   button.w-full.border.font-medium.rounded-md.text-sm.px-5.text-center.mr-2.mb-2(type='submit', value='Submit Form', name='register', class='text-[#023941] hover:text-white border-[#023941] hover:bg-[#023941] focus:ring-4 focus:outline-none focus:ring-[#023941] py-2.5 dark:border-[#023941] dark:text-[#023941] dark:hover:text-white dark:hover:bg-[#023941] dark:focus:ring-[#023941]') REGISTER
                 label#error-label.text-sm.mt-4.text-red-600= error  
                 script.
               // login now
               .flex.flex-col.justify-center.items-center.gap-4.mt-10
-                a.text-opacity-70.cursor-pointer(href='/ALT-login-signup.html', class='text-[#bd4500] hover:text-[#bd4500] hover:text-opacity-100') Have an Account?
+                a.text-opacity-70.cursor-pointer(href='/users/login', class='text-[#bd4500] hover:text-[#bd4500] hover:text-opacity-100') Have an Account?
           // Image
           .hidden.items-center.py-10.px-10(class='bg-[#bd4500] md:block w-1/2')
             svg#a87032b8-5b37-4b7e-a4d9-4dbfbe394641(data-name='Layer 1', xmlns='http://www.w3.org/2000/svg', width='100%', height='auto', viewBox='0 0 744.84799 747.07702')
