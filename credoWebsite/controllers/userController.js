@@ -35,7 +35,7 @@ exports.user_register =
       await user.save();
       console.log("USER SAVED");
       console.log(user);
-      res.redirect("/");
+      res.redirect("/users/login");
     }
     console.log('User created successfully:', user)
   }
@@ -69,7 +69,7 @@ exports.user_login =
       res
         .cookie('token', userToken, options)
         //.json({ success: true, userToken })
-        .redirect("/")
+        .render("dashboard", {role: user.role})
 
       console.log("Login Success")
     } else {
@@ -82,5 +82,5 @@ exports.user_login =
 //LOG OUT USER
 exports.logout = (req, res, next) => {
   res.clearCookie('token');
-  res.redirect('/');
+  res.redirect('/users/login');
 }
