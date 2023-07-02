@@ -38,7 +38,7 @@ exports.token_create = [
                 console.log("TOKEN SAVED");
                 console.log(token);
 
-                res.redirect("index");
+                res.redirect("/");
             }
         }
     }),
