@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/images/logo.png">
+</head>
+<body>
+    <div class="flex flex-col">
+        <!-- Navigation Bar -->
+        <div class="flex justify-around items-center text-xl p-2 bg-white">
+            <div class="flex">
+                <img src="/images/logo.png" alt="" class="w-16">
+                <div class="justify-around items-center mx-5 lg:flex hidden">
+                    <a class="mr-2 inline-block text-blue-900"  href="">Home</a>
+                    <a class="mx-2 inline-block hover:text-blue-900" href="">About</a>
+                    <a class="mx-2 inline-block hover:text-blue-900" href="/batch">Batch</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Anchors -->
+            <div class="justify-around items-center mx-5 flex lg:hidden">
+                <a class="mr-2 inline-block text-blue-900"  href="">Home</a>
+                <a class="mx-2 inline-block hover:text-blue-900" href="">About</a>
+            </div>
+            
+            <!-- Searchbar -->
+            <div class="flex">
+                <div class="lg:flex hidden text-base">
+                    <input type="text" placeholder="Search.." class="p-1 bg-slate-200 rounded-l-lg focus:outline-none">
+                    <div class="flex justify-center items-center bg-blue-900 p-1 rounded-r-lg">
+                        <i class="fa fa-search text-white" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="flex text-2xl justify-center items-center lg:ml-3">
+                    <div class="lg:hidden mx-1">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                    <i class="fa-brands fa-twitter hover:cursor-pointer text-blue-500 mx-1"></i>
+                    <i class="fa-brands fa-facebook hover:cursor-pointer text-blue-800 mx-1"></i>
+                    <i class="fa-brands fa-instagram hover:cursor-pointer text-pink-600 mx-1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-10 flex justify-center items-center">
+        <div class="p-3 border-2 flex flex-col justify-center items-center">
+            <img src="/images/gavel.png" alt="" class="mx-auto w-[50%]">
+            <h1 class="text-3xl text-center font-medium">Access Denied!</h1>
+            <h1 class="text-2xl text-center font-medium">Insufficient Permissions</h1>
+            <a href="/dashboard" class="text-xl mt-2 underline">Redirect</a>
+        </div>
+    </div>
+</body>
+</html>

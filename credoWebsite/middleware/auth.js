@@ -27,22 +27,18 @@ exports.isAuthenticated = async (req, res, next) =>{
 
 exports.isManufacturer = (req, res, next) =>{
     if (req.user.role === 'Manufacturer'){
-        console.log("Access Granted 1")
+        next();
     }
     else{
-        console.log("Access Denied")
+        res.render("permissionError");
     }
-    next();
-
 }
 
 exports.isManufacturerORDistributer = (req, res, next) =>{
-    if (req.user.role === 'Manufacturer' || req.user.role === 'Distributer'){
-        console.log("Access Granted 2")
+    if (req.user.role !== 'Pharmacy'){
+        next();
     }
     else{
-        console.log("Access Denied")
+        res.render("permissionError");
     }
-    next();
-
 }
