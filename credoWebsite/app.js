@@ -15,7 +15,8 @@ async function main() {
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var batchRouter = require('./routes/batch');
-var scanRouter = require('./routes/scan')
+var scanRouter = require('./routes/scan');
+var subbatchRouter = require('./routes/subbatch');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/batch', batchRouter);
 app.use('/scan', scanRouter);
+app.use('/subBatch', subbatchRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

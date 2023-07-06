@@ -13,9 +13,8 @@ head
     .flex.justify-around.items-center.mx-5
       a.mr-2.inline-block.text-blue-900.text-3xl(href='') Credo
   .flex.text-xs.justify-center.items-center
-    a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='') Previous Batches
+    a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/dashboard') Dashboard
     a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/users/logout') Signout
-  p#account.mr-4.text-xl.inline-block No wallet linked
 // Content
 form.text-center.py-40.text-blue-950(action='/batch/tokenData' method='POST')
   h1.text-5xl.p-8 Track Batch
@@ -24,7 +23,7 @@ form.text-center.py-40.text-blue-950(action='/batch/tokenData' method='POST')
   .p-2
     label.mb-2.text-2xl.text-black.p-2 Batch Number: 
     input#inputBatch.p-2.w-96.border.rounded-lg(type='text' name='batch_num' placeholder=' Insert The Batch Number ')
-  button#button2.text-2xl.border-2.border-blue-950.rounded-lg.px-4.py-2.text-blue-950.font-bold.mt-5(type='submit' class='hover:bg-blue-950 hover:text-white') Retrieve NFT
+  button#button2.text-2xl.border-2.border-blue-950.rounded-lg.px-4.py-2.text-blue-950.font-bold.mt-5(type='submit' class='hover:bg-blue-950 hover:text-white') Track
 // Footer
 footer.p-8.bg-white.mt-auto
   div

@@ -20,6 +20,7 @@ head
 .flex.justify-center.items-center
   form.text-center.p-10.text-blue-950.border-2.mt-10(action='/batch/tokenData' method='POST' class='w-1/2')
     h1.text-5xl.mb-5 Create Batch
+    label#errorNULL.mb-2.text-2xl.text-red-600.p-2
     .flex-col.text-start.mb-5.gap-2
       .m-2
         label.mb-2.text-2xl.text-black.p-2 Batch Number:
@@ -32,13 +33,12 @@ head
         label.mb-2.text-2xl.text-black.p-2 Medicine Name:
         input#inputMedicineName.p-2.w-96.border.rounded-lg(type='text' name='Medicine_Name' placeholder='Insert The Medicine Name')
       .m-2
-        label.mb-2.text-2xl.text-black.p-2 Expiration Date:
-        input#inputExpiration.p-2.w-96.border.rounded-lg(type='date' name='expiration_date')
-      .m-2
         label.mb-2.text-2xl.text-black.p-2 Production Date:
         input#inputProduction.p-2.w-96.border.rounded-lg(type='date' name='production_date')
-        label#errorNULL.mb-2.text-2xl.text-red-600.p-2
-    a#button1.text-2xl.border-2.border-blue-950.rounded-lg.px-4.py-2.text-blue-950.font-bold.mt-10(class='hover:bg-blue-950 hover:text-white hover:cursor-pointer') Mint NFT
+      .m-2
+        label.mb-2.text-2xl.text-black.p-2 Expiration Date:
+        input#inputExpiration.p-2.w-96.border.rounded-lg(type='date' name='expiration_date')
+    a#button1.text-2xl.border-2.border-blue-950.rounded-lg.px-4.py-2.text-blue-950.font-bold.mt-10(class='hover:bg-blue-950 hover:text-white hover:cursor-pointer') Create
 // Footer
 footer.p-8.bg-white.mt-auto
   div

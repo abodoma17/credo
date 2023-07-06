@@ -66,7 +66,7 @@ exports.token_getID = [
             
             if(tokenExists){
                 const newTokenID = tokenExists.token_id;
-                console.log(`Token with id ${newTokenID} exits, redirecting.`)
+                console.log(`Token with id ${newTokenID} exists, redirecting.`)
                 res.redirect(`/batch/${newTokenID}`);
             }
             else{

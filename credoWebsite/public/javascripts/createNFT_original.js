@@ -37,10 +37,6 @@ async function addTokenToDB(batch_num, token_ID) {
 
 async function createBat() {
 
-    await Moralis.start({
-        apiKey: "TEJaUyO5l5d9hmTfZ29HWw8WtEEZZeJZ3OLPwOli57z6447CA0nv0GUrXdTiBaB5",
-    });
-
     let batch_num = document.getElementById("inputBatch").value;
     let owner_name = document.getElementById("manufacturerName").value;
     let medicine_name = document.getElementById("inputMedicineName").value;
@@ -48,10 +44,14 @@ async function createBat() {
     let production_date = document.getElementById("inputProduction").value;
     let token_creation_date = new Date().toJSON();
 
-    if (batch_num === null || owner_name === null || medicine_name === null || expiration_date === null || production_date === null) {
+    if (batch_num === "" || owner_name === "" || medicine_name === "" || expiration_date === "" || production_date === "") {
         document.getElementById('errorNULL').textContent = "Please fill in all the required fields.";
     }
     else {
+        
+        await Moralis.start({
+            apiKey: "TEJaUyO5l5d9hmTfZ29HWw8WtEEZZeJZ3OLPwOli57z6447CA0nv0GUrXdTiBaB5",
+        });
 
         const abi = [
             {

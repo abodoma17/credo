@@ -34,6 +34,15 @@ exports.isManufacturer = (req, res, next) =>{
     }
 }
 
+exports.isDistributor = (req, res, next) =>{
+    if (req.user.role === 'Distributor'){
+        next();
+    }
+    else{
+        res.render("permissionError");
+    }
+}
+
 exports.isManufacturerORDistributer = (req, res, next) =>{
     if (req.user.role !== 'Pharmacy'){
         next();

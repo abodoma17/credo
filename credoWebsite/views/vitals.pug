@@ -9,30 +9,14 @@ html(lang='en')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==', crossorigin='anonymous', referrerpolicy='no-referrer')
   body
     // Navigation Bar
-    .flex.justify-around.items-center.text-xl.p-2.border-b-2
+    .flex.justify-around.items-center.p-2.bg-white
       .flex
-        img.w-16(src='/images/logo.png', alt='')
-        .justify-around.items-center.mx-5.hidden(class='lg:flex')
-          a.mx-2.inline-block(class='hover:text-blue-900', href='/') Home
-          a.mx-2.inline-block(class='hover:text-blue-900', href='') About
-          a.mr-2.inline-block.text-blue-900(href='/batch') Batch
-          
-      // Mobile Anchors
-      .justify-around.items-center.mx-5.flex(class='lg:hidden')
-        a.mr-2.inline-block.text-blue-900(href='') Home
-        a.mx-2.inline-block(class='hover:text-blue-900', href='') About
-      // Searchbar
-      .flex
-        .hidden.text-base(class='lg:flex')
-          input.p-1.bg-slate-200.rounded-l-lg(type='text', placeholder='Search..', class='focus:outline-none')
-          .flex.justify-center.items-center.bg-blue-900.p-1.rounded-r-lg
-            i.fa.fa-search.text-white(aria-hidden='true')
-        .flex.text-2xl.justify-center.items-center(class='lg:ml-3')
-          .mx-1(class='lg:hidden')
-            i.fa.fa-search(aria-hidden='true')
-          i.fa-brands.fa-twitter.text-blue-500.mx-1(class='hover:cursor-pointer')
-          i.fa-brands.fa-facebook.text-blue-800.mx-1(class='hover:cursor-pointer')
-          i.fa-brands.fa-instagram.text-pink-600.mx-1(class='hover:cursor-pointer')
+        img.w-16(src='/images/logo.png' alt='')
+        .flex.justify-around.items-center.mx-5
+          a.mr-2.inline-block.text-blue-900.text-3xl(href='') Credo
+      .flex.text-xs.justify-center.items-center
+        a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/dashboard') Dashboard
+        a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/users/logout') Signout
       //- Content
     .py-10.flex.justify-center.items-center(class='md:px-[15%]')
       .flex.pb-5.flex-col(class='md:flex-row')
