@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/images/logo.png">
+        <title>NFT Minting</title>
+        <link rel="stylesheet" href="../public/stylesheets/style.css">
+    </head>
+    <body class="flex flex-col min-h-screen">
+        <!-- Navigation Bar -->
+        <div class="flex justify-around items-center p-2 bg-white">
+            <div class="flex">
+                <img src="/images/logo.png" alt="" class="w-16">
+                <div class="flex justify-around items-center mx-5">
+                    <a class="mr-2 inline-block text-blue-900 text-3xl"  href="">Credo</a>
+                </div>
+            </div>
+            
+            <div class="flex text-xs justify-center items-center">
+                <a class="mr-4 text-xl  inline-block text-blue-900 hover:text-emerald-500"  href="/users/logout">Signout</a>
+            </div>
+
+            <p class="mr-4 text-xl inline-block" id="account">No wallet linked</p>
+        </div>
+        <!-- Content -->
+        <div class="flex justify-center items-center">
+            <form action='/batch/tokenData' method='POST' class="text-center p-10 text-blue-950 border-2 w-1/2 mt-10">
+                <h1 class="text-5xl mb-5">Create Batch</h1>
+                <div class="flex-col text-start mb-5 gap-2">
+                    <div class="m-2">
+                        <label class=" mb-2 text-2xl text-black  p-2">Batch Number:</label>
+                        <input type="text" name="batch_num" id="inputBatch" placeholder="Insert The Batch Number" class="p-2 w-96 border rounded-lg">
+                    </div>
+
+                    <div class="m-2">
+                        <label class=" mb-2 text-2xl text-black  p-2 pl-0">Owner Name:</label>
+                        <!-- <label for="" class="w-96 text-2xl text-black" id="manufacturerName">Pharco Industries</label> -->
+                        <input type="text" name="batch_num" id="manufacturerName" value="" class="p-2 w-96 border rounded-lg" readonly>
+                    </div>
+
+                    <div class="m-2">
+                        <label class=" mb-2 text-2xl text-black  p-2">Medicine Name:</label>
+                        <input type="text" name="Medicine_Name" id="inputMedicineName" placeholder="Insert The Medicine Name" class="p-2 w-96 border rounded-lg">
+                    </div>
+
+                    <div class="m-2">
+                        <label class=" mb-2 text-2xl text-black  p-2">Expiration Date:</label>
+                        <input type="date" name="expiration_date" id="inputExpiration" class="p-2 w-96 border rounded-lg">
+                    </div>
+
+                    <div class="m-2">
+                        <label class=" mb-2 text-2xl text-black  p-2">Production Date:</label>
+                        <input type="date" name="production_date" id="inputProduction" class="p-2 w-96 border rounded-lg">
+                    </div>
+                </div>
+                
+                
+                <a id="button1" class="text-2xl border-2 border-blue-950  rounded-lg px-4 py-2 text-blue-950  font-bold mt-10  hover:bg-blue-950  hover:text-white hover:cursor-pointer">Mint NFT</a>
+            </form>
+        </div>
+        
+        <!-- Footer -->
+        <footer class=" p-8 bg-white mt-auto">
+            <div></div>
+        </footer>
+        <script src="test.js"></script>
+    </body>
+</html>

@@ -63,14 +63,14 @@ exports.token_getID = [
         }
         else{
             const tokenExists = await Token.findOne({ batch_num: req.body.batch_num }).exec();
-            const newTokenID = tokenExists.token_id;
-
+            
             if(tokenExists){
+                const newTokenID = tokenExists.token_id;
                 console.log(`Token with id ${newTokenID} exits, redirecting.`)
                 res.redirect(`/batch/${newTokenID}`);
             }
             else{
-                res.send("NO BATCH WITH THIS ID");
+                res.render('retrieveBatch', {error: `No Batch with batch number: ${req.body.batch_num}`});
             }
         }
     }),

@@ -1,0 +1,44 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='icon' href='/images/logo.png')
+  title NFT Minting
+  link(rel='stylesheet' href='/stylesheets/style.css')
+// Navigation Bar
+.flex.justify-around.items-center.p-2.bg-white
+  .flex
+    img.w-16(src='/images/logo.png' alt='')
+    .flex.justify-around.items-center.mx-5
+      a.mr-2.inline-block.text-blue-900.text-3xl(href='') Credo
+  .flex.text-xs.justify-center.items-center
+    a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/dashboard') Dashboard
+    a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/users/logout') Signout
+  p#account.mr-4.text-xl.inline-block No wallet linked
+// Content
+.flex.justify-center.items-center
+  form.text-center.p-10.text-blue-950.border-2.mt-10(action='/batch/tokenData' method='POST' class='w-1/2')
+    h1.text-5xl.mb-5 Create Batch
+    .flex-col.text-start.mb-5.gap-2
+      .m-2
+        label.mb-2.text-2xl.text-black.p-2 Batch Number:
+        input#inputBatch.p-2.w-96.border.rounded-lg(type='text' name='batch_num' placeholder='Insert The Batch Number')
+      .m-2
+        label.mb-2.text-2xl.text-black.p-2.pl-0 Owner Name:
+        // <label for="" class="w-96 text-2xl text-black" id="manufacturerName">Pharco Industries</label>
+        input#manufacturerName.p-2.w-96.border.rounded-lg(type='text' name='batch_num' value=name readonly='')
+      .m-2
+        label.mb-2.text-2xl.text-black.p-2 Medicine Name:
+        input#inputMedicineName.p-2.w-96.border.rounded-lg(type='text' name='Medicine_Name' placeholder='Insert The Medicine Name')
+      .m-2
+        label.mb-2.text-2xl.text-black.p-2 Expiration Date:
+        input#inputExpiration.p-2.w-96.border.rounded-lg(type='date' name='expiration_date')
+      .m-2
+        label.mb-2.text-2xl.text-black.p-2 Production Date:
+        input#inputProduction.p-2.w-96.border.rounded-lg(type='date' name='production_date')
+    a#button1.text-2xl.border-2.border-blue-950.rounded-lg.px-4.py-2.text-blue-950.font-bold.mt-10(class='hover:bg-blue-950 hover:text-white hover:cursor-pointer') Mint NFT
+// Footer
+footer.p-8.bg-white.mt-auto
+  div
+script(src='/javascripts/createNFT.js')
