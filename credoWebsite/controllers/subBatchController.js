@@ -71,7 +71,7 @@ exports.token_getID = [
             const tokenExists = await SubBatch.findOne({ subBatch_num: req.body.batch_num }).exec();
             
             if(tokenExists){
-                res.render('subBatchVitals', {parent_id: tokenExists.parent_id, subBatch_id: tokenExists.token_id});
+                res.render('SubBatchVitals', {parent_id: tokenExists.parent_id, subBatch_id: tokenExists.token_id});
             }
             else{
                 res.render('retrieveBatch', {error: `No Batch with batch number: ${req.body.batch_num}`});

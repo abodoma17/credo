@@ -40,8 +40,8 @@ async function addTokenToDB(parentTokenId, parentBatchNum, subBatchNum, currentT
 
 async function createBat() {
 
-    let parentBatchNum = document.getElementById("batch_num").value;
-    let parentTokenId = document.getElementById("batch_num").selectedOptions[0].text;
+    let parentTokenId = document.getElementById("batch_num").value;
+    let parentBatchNum = document.getElementById("batch_num").selectedOptions[0].text;
     let subBatchNum = document.getElementById("inputBatch").value;
     let companyName = document.getElementById("ownerName").value;
     var checked = document.querySelectorAll('#recipients :checked');
