@@ -46,7 +46,7 @@ async function logJSONSubBatch(link){
     jsonData.recipients.forEach(recipient => {
         let li = document.createElement('li');
         li.textContent = recipient;
-        li.classList = "font-extralight"
+        li.classList = "font-extralight text-2xl"
 
         document.getElementById("recipients").appendChild(li);
     });

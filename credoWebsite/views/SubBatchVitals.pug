@@ -38,6 +38,16 @@ html(lang='en')
             | Recipients:   
             ul#recipients
         div(class='md:pl-12')
+          h1.text-4xl.font-semibold.mb-2 Batch Information
+          p.text-2xl
+            | Parent Batch Number: 
+            span#name.font-extralight
+          p.text-2xl
+            | Token ID: 
+            span(class='font-extralight', id="tokenID")= parent_id
+          p.text-2xl
+            | Produced By: 
+            span#owner_name.font-extralight
           h1.text-4xl.font-semibold.mb-2 Additional Information
           p.text-2xl
             | Medicine Name: 
@@ -48,13 +58,6 @@ html(lang='en')
           p.text-2xl
             | Expiration Date: 
             span#expiration_date.font-extralight
-          h1.text-4xl.font-semibold.mb-2 Batch Information
-          p.text-2xl
-            | Token ID: 
-            span(class='font-extralight', id="tokenID")= parent_id
-          p.text-2xl
-            | Produced By: 
-            span#owner_name.font-extralight
     .flex.flex-col.justify-center.items-center.gap-8(class='md:px-[15%] md:flex-row')
       .h-72.flex.justify-center.items-center.px-3.py-3.border.shadow-lg(class='md:w-[20%] w-[50%]')
         .flex.flex-col.justify-center.items-center
@@ -115,4 +118,4 @@ html(lang='en')
             | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque ut sunt eaque repellendus ad a maxime sit molestias corrupti ullam aspernatur hic, optio sint? Perferendis, incidunt.
           input#first_name.mt-2.bg-gray-50.border.border-gray-300.text-gray-900.text-sm.rounded-lg.block.w-56.p-2.mb-2(type='text', class='focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500', placeholder='E-mail', required='')
           button.text-white.bg-blue-800.font-medium.rounded-lg.text-sm.p-2.w-24.mr-2.mb-2(type='button', class='hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800') Sign Up
-script(src='/javascripts/retrieveNFT.js')
+script(src='/javascripts/retrieveSubbatch.js')
