@@ -1,4 +1,5 @@
 const Token = require("../models/token");
+const SubBatch = require("../models/subbatch");
 const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
 
@@ -74,4 +75,19 @@ exports.token_getID = [
             }
         }
     }),
+];
+
+exports.batch_recall = [
+        asyncHandler( async (req, res, next) => {
+            let BN = req.body.batch_num;
+            let recipients = await SubBatch.find({parent_num: BN}).select('subBatch_num recipients').exec();
+            if (recipients){
+                console.log(recipients);
+                res.render('recallResult', {subbatches: recipients})
+            }else{
+                res.render('recallBatch', {error: `No Batch with batch number: ${req.body.batch_num}`});
+            }
+            
+        }
+    )
 ];

@@ -27,6 +27,15 @@ head
           | Create now
           svg.w-5.h-5.ml-2.-mr-1(aria-hidden='true', fill='currentColor', viewBox='0 0 20 20', xmlns='http://www.w3.org/2000/svg')
             path(fill-rule='evenodd', d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z', clip-rule='evenodd')
+     .max-w-sm.bg-white.px-6.pt-6.pb-2.rounded-xl.shadow-lg.transform.transition.duration-500(class='hover:scale-105')
+      .relative
+        img.w-full.rounded-xl(src='https://images.unsplash.com/photo-1561835491-ed2567d96913?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80' alt='Colors')
+      h1.my-10.text-gray-800.text-2xl.font-bold.cursor-pointer  Recall Batch
+      .my-10 
+        a.cursor-pointer.text-white.text-lg.rounded-xl.px-5.font-bold.py-4.text-center.inline-flex.items-center(href='/batch/recall', class='bg-[#2da95c] hover:bg-[#2D965C]')
+          | Recall now
+          svg.w-5.h-5.ml-2.-mr-1(aria-hidden='true', fill='currentColor', viewBox='0 0 20 20', xmlns='http://www.w3.org/2000/svg')
+            path(fill-rule='evenodd', d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z', clip-rule='evenodd')
     if role == "Distributor"
      .max-w-sm.bg-white.px-6.pt-6.pb-2.rounded-xl.shadow-lg.transform.transition.duration-500(class='hover:scale-105')
       .relative

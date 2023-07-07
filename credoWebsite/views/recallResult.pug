@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Tracking vitals
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==', crossorigin='anonymous', referrerpolicy='no-referrer')
+  body
+    // Navigation Bar
+    .flex.justify-around.items-center.p-2.bg-white
+      .flex
+        img.w-16(src='/images/logo.png' alt='')
+        .flex.justify-around.items-center.mx-5
+          a.mr-2.inline-block.text-blue-900.text-3xl(href='') Credo
+      .flex.text-xs.justify-center.items-center
+        a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/dashboard') Dashboard
+        a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/users/logout') Signout
+      //- Content
+    .py-10.flex.justify-center.items-center(class='md:px-[15%]')
+      .flex.pb-5.flex-col(class='md:flex-row')
+        .pb-5(class='p-10 border-2')
+          h1.text-4xl.font-semibold.mb-2 Sub-Batch Information
+          each subbatch in subbatches
+           p.text-2xl.mt-2
+             | Sub-Batch Number: 
+             span#subbatch_number.font-extralight= subbatch.subBatch_num
+           p.text-2xl
+             | Recipients:   
+             ul#recipients
+             each recipient in subbatch.recipients
+              p.font-extralight.text-2xl= recipient

@@ -1103,7 +1103,7 @@
   "sourceMap": "88:544:13:-:0;;;179:10;156:33;;;;;;;;;;;;;;;;;;;;88:544;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "88:544:13:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;514:115;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;156:33;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;408:22;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;514:115;576:7;589:31;;;;;;;;595:12;589:31;;;;609:10;589:31;;;;;576:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;514:115;:::o;156:33::-;;;;;;;;;;;;:::o;408:22::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;88:117:15:-;197:1;194;187:12;334:77;371:7;400:5;389:16;;334:77;;;:::o;417:122::-;490:24;508:5;490:24;:::i;:::-;483:5;480:35;470:63;;529:1;526;519:12;470:63;417:122;:::o;545:139::-;591:5;629:6;616:20;607:29;;645:33;672:5;645:33;:::i;:::-;545:139;;;;:::o;690:329::-;749:6;798:2;786:9;777:7;773:23;769:32;766:119;;;804:79;;:::i;:::-;766:119;924:1;949:53;994:7;985:6;974:9;970:22;949:53;:::i;:::-;939:63;;895:117;690:329;;;;:::o;1025:126::-;1062:7;1102:42;1095:5;1091:54;1080:65;;1025:126;;;:::o;1157:96::-;1194:7;1223:24;1241:5;1223:24;:::i;:::-;1212:35;;1157:96;;;:::o;1259:118::-;1346:24;1364:5;1346:24;:::i;:::-;1341:3;1334:37;1259:118;;:::o;1383:222::-;1476:4;1514:2;1503:9;1499:18;1491:26;;1527:71;1595:1;1584:9;1580:17;1571:6;1527:71;:::i;:::-;1383:222;;;;:::o;1611:118::-;1698:24;1716:5;1698:24;:::i;:::-;1693:3;1686:37;1611:118;;:::o;1735:332::-;1856:4;1894:2;1883:9;1879:18;1871:26;;1907:71;1975:1;1964:9;1960:17;1951:6;1907:71;:::i;:::-;1988:72;2056:2;2045:9;2041:18;2032:6;1988:72;:::i;:::-;1735:332;;;;;:::o",
   "source": "// SPDX-License-Identifier: SEE LICENSE IN LICENSE\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract Batches {\r\n    //Owner of the invoker of the contract\r\n    address public owner = msg.sender;\r\n    \r\n    //Struct (object) batch contains batchNumber and owner's address\r\n    struct Batch {\r\n        uint256 batchNumber;\r\n        address ownerAddress;\r\n    }\r\n\r\n    //Array of batches that has dynamic size\r\n    Batch[] public batches;\r\n\r\n    //Creates batch, adds to array of batches -> address taken from above\r\n    function _createBatch(uint256 _batchNumber) public {\r\n        batches.push(Batch(_batchNumber, msg.sender));\r\n    }\r\n}",
-  "sourcePath": "D:\\Grad Project\\Project 2\\NFT\\credo\\contracts\\Batches.sol",
+  "sourcePath": "E:\\College\\Grad Proj\\Project II\\Week 15\\credo\\contracts\\Batches.sol",
   "ast": {
     "absolutePath": "project:/contracts/Batches.sol",
     "exportedSymbols": {
@@ -1529,12 +1529,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xA26A61F690059f7F2c77b09819a2711118a8b75A",
-      "transactionHash": "0xc0cfd76e313e53524fc2f8b3ceb58a0a76d4ed547ec0e65ea655b7de32a756ba"
+      "address": "0x05cD1FE3c235BCD9681d14B1c81e1FFdF34D6c33",
+      "transactionHash": "0xdf6a9d0b91b7fe938b79d5205d241ed632f17c1db1a015a80e8e75e5a573d7f6"
     }
   },
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-06-04T16:04:48.868Z",
+  "updatedAt": "2023-07-07T18:41:42.291Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

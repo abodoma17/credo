@@ -1,0 +1,30 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='icon' href='/images/logo.png')
+  title NFT Minting
+  link(rel='stylesheet' href='/stylesheets/style.css')
+// Navigation Bar
+.flex.justify-around.items-center.p-2.bg-white
+  .flex
+    img.w-16(src='/images/logo.png' alt='')
+    .flex.justify-around.items-center.mx-5
+      a.mr-2.inline-block.text-blue-900.text-3xl(href='') Credo
+  .flex.text-xs.justify-center.items-center
+    a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/dashboard') Dashboard
+    a.mr-4.text-xl.inline-block.text-blue-900(class='hover:text-emerald-500' href='/users/logout') Signout
+// Content
+form.text-center.py-40.text-blue-950(action='/batch/recall' method='POST')
+  h1.text-5xl.p-8 Recall Batch
+  if error
+   label.mb-2.text-2xl.text-black.p-2.text-red-600= error
+  .p-2
+    label.mb-2.text-2xl.text-black.p-2 Batch Number: 
+    input#inputBatch.p-2.w-96.border.rounded-lg(type='text' name='batch_num' placeholder=' Insert The Batch Number ')
+  button#button2.text-2xl.border-2.border-blue-950.rounded-lg.px-4.py-2.text-blue-950.font-bold.mt-5(type='submit' class='hover:bg-blue-950 hover:text-white') Recall
+// Footer
+footer.p-8.bg-white.mt-auto
+  div
+script(type='module' src='/javascripts/nftOriginal.js')

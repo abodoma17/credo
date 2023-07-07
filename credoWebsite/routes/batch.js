@@ -22,6 +22,12 @@ router.get('/retrieve', auth.isAuthenticated, (req, res) => {
   res.render('retrieveBatch');
 });
 
+//Recall Batch
+router.post('/recall', auth.isAuthenticated, auth.isManufacturer, batchController.batch_recall);
+router.get('/recall', auth.isAuthenticated, auth.isManufacturer, function(req, res) {
+  res.render('recallBatch')
+});
+
 router.get('/:tokenID', function(req, res) {
     console.log(`TOKEN ID RECEIVED: ${req.params.tokenID}`);
     tokenID = req.params.tokenID;
